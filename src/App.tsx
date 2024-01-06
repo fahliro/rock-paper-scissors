@@ -19,6 +19,7 @@ const App = () => {
     theHousePicked: 0,
   });
   const [result, setResult] = useState<Result>();
+  const [score, setScore] = useState<number>(0);
 
   //need refactor
   const defaultWidth: string = "1366px";
@@ -60,6 +61,8 @@ const App = () => {
     isWin,
     isLose,
     isDraw,
+    score,
+    setScore,
   };
 
   return (
@@ -86,7 +89,7 @@ const App = () => {
             
             md:col-start-4 md:col-span-5"
             >
-              <Score />
+              <Score props={props} />
             </div>
           </div>
           <div className="grid justify-center mt-24">

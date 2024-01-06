@@ -1,8 +1,9 @@
 import { Suspense } from "react";
 import Logo from "../assets/logo-bonus.svg";
+import { IProps } from "../interfaces";
 import Loading from "./Loading";
 
-const Score = () => {
+const Score = ({ props: { score } }: IProps) => {
   return (
     <Suspense fallback={<Loading />}>
       <div className="grid grid-cols-2 border-2 border-solid border-neutral-header-outline p-5 rounded-lg">
@@ -12,7 +13,9 @@ const Score = () => {
         <div className="grid justify-end">
           <div className="bg-slate-200 rounded-lg text-center grid justify-center content-center py-3 px-8">
             <div className="text-neutral-score-text">Score</div>
-            <div className="text-neutral-dark-text text-5xl font-bold">13</div>
+            <div className="text-neutral-dark-text text-5xl font-bold">
+              {score}
+            </div>
           </div>
         </div>
       </div>

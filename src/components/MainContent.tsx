@@ -23,6 +23,8 @@ const MainContent = ({ props }: IProps) => {
     setResult,
     isWin,
     isLose,
+    score,
+    setScore,
   } = props;
 
   const handleClearTimer = (): void => {
@@ -113,6 +115,16 @@ const MainContent = ({ props }: IProps) => {
   }, []);
 
   useEffect(() => handleSetResult(), [yourPicked, theHousePicked]);
+
+  useEffect(() => {
+    if (showResult) {
+      if (isWin && score >= 0) {
+        setScore((prev: number) => prev + 1);
+      } else if (isLose && score > 0) {
+        setScore((prev: number) => prev - 1);
+      }
+    }
+  }, [showResult]);
 
   return (
     <Suspense fallback={<Loading />}>

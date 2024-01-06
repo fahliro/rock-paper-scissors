@@ -22,7 +22,9 @@ export interface IStates {
     SPOCK: ItemType.SPOCK,
     isWin: boolean,
     isLose: boolean,
-    isDraw: boolean
+    isDraw: boolean,
+    score: number,
+    setScore: React.Dispatch<React.SetStateAction<number>>
 
 }
 
