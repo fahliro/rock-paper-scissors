@@ -45,7 +45,7 @@ const ItemPicked = ({ props, isTheHouse }: IProps & IItemPicked) => {
 
   return (
     <Suspense fallback={<Loading />}>
-      <div className="order-2 md:order-1 grid justify-center">{`${
+      <div className="order-2 md:order-1 grid justify-center whitespace-nowrap">{`${
         isTheHouse ? "The House Picked" : "You Picked"
       }`}</div>
       <div className="order-1 md:order-2 scale-[1.5] md:scale-[2] mb-10 md:mt-20 md:mb-0 grid justify-center">
