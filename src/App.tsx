@@ -73,7 +73,7 @@ const App = () => {
         md:justify-center md:items-center"
       >
         <div
-          className={`relative p-5 
+          className={`relative p-4 
           
           ${isDesktop && `w-1366 h-599`}
           
