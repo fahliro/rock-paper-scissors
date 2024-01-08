@@ -6,7 +6,7 @@ import Loading from "./Loading";
 const Score = ({ props: { score } }: IProps) => {
   return (
     <Suspense fallback={<Loading />}>
-      <div className="grid grid-cols-2 border-2 border-solid border-neutral-header-outline p-5 rounded-lg">
+      <div className="grid grid-cols-2 border-2 border-solid border-neutral-header-outline p-3 md:p-5 rounded-lg">
         <div className="grid items-center">
           <img src={Logo} alt="Logo" className="w-[80px] md:w-[90px]" />
         </div>
