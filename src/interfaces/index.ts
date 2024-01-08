@@ -35,6 +35,7 @@ export interface IProps {
 export interface IIcon {
     value: string,
     label: ItemType | undefined
+    isClickable?: boolean
 }
 
 export interface IItemPicked {

@@ -86,6 +86,7 @@ const ItemPicked = ({ props, isTheHouse }: IProps & IItemPicked) => {
               value={handleImage({ type: item })}
               label={item}
               props={props}
+              isClickable={false}
             />
           )}
         </div>

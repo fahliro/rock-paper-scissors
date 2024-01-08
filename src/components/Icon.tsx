@@ -14,6 +14,7 @@ const Icon = ({
     LIZARD,
     SPOCK,
   },
+  isClickable = true,
 }: IIcon & IProps) => {
   const handleClick = (): void => {
     setIsMainContent(true);
@@ -40,8 +41,10 @@ const Icon = ({
   return (
     <Suspense fallback={<Loading />}>
       <div
-        onClick={handleClick}
-        className={`rounded-full h-100 w-100 ${handleGradientClass()} grid justify-center items-center shadow-inner-bottom cursor-pointer`}
+        onClick={isClickable ? handleClick : undefined}
+        className={`rounded-full h-100 w-100 ${handleGradientClass()} grid justify-center items-center shadow-inner-bottom ${
+          isClickable && "cursor-pointer"
+        }`}
       >
         <div
           className={`rounded-full h-75 w-75 bg-slate-200 grid justify-center items-center shadow-inner-top`}
